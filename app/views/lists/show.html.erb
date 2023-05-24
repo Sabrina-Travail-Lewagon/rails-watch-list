@@ -42,7 +42,7 @@
             <h1>Add Your bookmark</h1>
             <%= simple_form_for [@list, @bookmark] do |f| %>
               <%= f.input :comment %>
-              <%= f.association :movie, collection: Movie.all, prompt: "Select a movie" %>
+              <%= f.association :movie, collection: Movie.all, prompt: "Select a movie", input_html: {data: {controller: "tom-select"}} %>
               <%= f.submit "Add Bookmark", class: 'btn btn-primary' %>
             <% end %>
           </div>
