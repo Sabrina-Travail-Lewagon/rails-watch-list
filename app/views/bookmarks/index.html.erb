@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h1>Liste des bookmarks</h1>
+  <div class="row">
+
+      <% @bookmarks.each do |bookmark| %>
+      <div class="col-md-4">
+        <div class="card-trip">
+          <img src="<%= bookmark.movie.poster_url %>" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= bookmark.movie.title %></h2>
+              <p><%= bookmark.movie.overview %></p>
+            </div>
+            <h2 class="card-trip-pricing"><%= bookmark.comment %></h2>
+          </div>
+        </div>
+        <%= bookmark.list.name %>
+      </div>
+      <% end %>
+
+
+  </div>
+
+
+</div>

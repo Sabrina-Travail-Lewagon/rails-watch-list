@@ -1,0 +1,15 @@
+<div class="banner">
+  <div class="container">
+    <h1>Classic movies</h1>
+  </div>
+</div>
+<div class="container mt-4">
+  <h1>Ajout d'une liste</h1>
+	<%= simple_form_for(@list) do |f| %>
+	  <%= f.input :name %>
+	  <%= f.submit "Add a list", class: 'btn btn-primary' %>
+  <% end %>
+  <%= link_to lists_path, class: "btn-accueil" do %>
+    <i class="fas fa-home"></i>
+  <% end %>
+</div>

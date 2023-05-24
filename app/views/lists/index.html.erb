@@ -1,0 +1,18 @@
+<div class="banner">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+    <p>Classic</p>
+  </div>
+</div>
+<div class="container mt-5">
+  <h1>My lists</h1>
+    <%= link_to "Create a movie list", lists_new_path, class: "btn btn-flat float-end" %>
+
+  <div class="row">
+    <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= link_to list.name, list_path(list) %>
+    </div>
+  <% end %>
+  </div>
+</div>

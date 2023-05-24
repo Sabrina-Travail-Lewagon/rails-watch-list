@@ -1,0 +1,29 @@
+.banner{
+  background-image: asset-url("salle_cine.png");
+  background-size: cover;
+  height: 400px;
+  width: auto;
+  background-position: center;
+  padding: 150px 0;
+
+  h1{
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 38px;
+  font-weight: bold;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  }
+
+  p{
+    font-size: 24px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  }
+}

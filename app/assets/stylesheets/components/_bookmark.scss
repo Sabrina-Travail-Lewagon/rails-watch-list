@@ -1,0 +1,15 @@
+// a.bookmark{
+//   display: flex;
+//   justify-content: flex-end;
+//   position: absolute;
+//   left: 500px;
+//   top: 0px;
+// }
+a.bookmark {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-content: center;
+  font-size: 32px;
+  text-decoration: none;
+}
