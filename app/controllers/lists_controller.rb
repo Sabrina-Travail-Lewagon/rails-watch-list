@@ -5,7 +5,10 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    # On récupère la liste des films
     @movies = @list.movies
+    # On récupère les bookmarks
+    @bookmarks = @list.bookmarks
     ## Partie pour le formulaire d'ajout du bookmark
     # On récupère l'id de la liste
     @list = List.find(params[:id])
