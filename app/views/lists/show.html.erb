@@ -40,8 +40,12 @@
       <div class="col-md-4">
         <h1>Reviews</h1>
         <ul>
+        <% @list.reviews.each do |review| %>
         <li>
+          <%= review.comment %>
+          <%= review.rating %>
         </li>
+        <% end %>
         </ul>
       </div>
     </div>
@@ -52,11 +56,11 @@
       <div class="d-flex flex-row-reverse">
         <div class="col-md-4">
           <div class="card-bookmark">
-            <h1>Add Your bookmark</h1>
-            <%= simple_form_for [@list, @bookmark] do |f| %>
-              <%= f.input :comment %>
-              <%= f.association :movie, collection: Movie.all, prompt: "Select a movie", input_html: {data: {controller: "tom-select"}} %>
-              <%= f.submit "Add Bookmark", class: 'btn btn-primary' %>
+            <h1>Add Your Review</h1>
+            <%= simple_form_for [@list, @review] do |f| %>
+              <%= f.input :comment, placeholder: "Add your review here..." %>
+              <%= f.input :rating %>
+              <%= f.submit "Add Review", class: 'btn btn-primary' %>
             <% end %>
           </div>
         </div>
