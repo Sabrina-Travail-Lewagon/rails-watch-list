@@ -7,6 +7,7 @@
   <h1>Ajout d'une liste</h1>
 	<%= simple_form_for(@list) do |f| %>
 	  <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
 	  <%= f.submit "Add a list", class: 'btn btn-primary' %>
   <% end %>
   <%= link_to lists_path, class: "btn-accueil" do %>
