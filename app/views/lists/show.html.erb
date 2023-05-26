@@ -42,8 +42,13 @@
         <ul>
         <% @list.reviews.each do |review| %>
         <li>
+          <% (1..5).each do |i| %>
+            <% if i <= review.rating %>
+              <i class="fas fa-star star-yellow"></i>
+            <% end %>
+          <% end %>
           <%= review.comment %>
-          <%= review.rating %>
+
         </li>
         <% end %>
         </ul>
@@ -59,7 +64,7 @@
             <h1>Add Your Review</h1>
             <%= simple_form_for [@list, @review] do |f| %>
               <%= f.input :comment, placeholder: "Add your review here..." %>
-              <%= f.input :rating %>
+              <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience", input_html: {data: {controller: "star-rating"}} %>
               <%= f.submit "Add Review", class: 'btn btn-primary' %>
             <% end %>
           </div>
