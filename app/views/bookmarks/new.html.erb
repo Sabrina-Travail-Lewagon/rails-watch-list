@@ -4,6 +4,11 @@
   </div>
 </div>
 <div class="container mt-4">
+  <div>
+    <%= link_to lists_path, class: "btn-accueil" do %>
+      <i class="fas fa-home"></i>
+    <% end %>
+  </div>
   <h1>Add Your bookmark</h1>
   <%= simple_form_for [@list, @bookmark] do |f| %>
     <%= f.input :comment %>
