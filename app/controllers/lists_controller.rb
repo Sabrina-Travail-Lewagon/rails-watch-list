@@ -20,6 +20,7 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(set_params_list)
+
     if @list.save
       redirect_to list_path(@list)
     else

@@ -1,5 +1,6 @@
 class List < ApplicationRecord
   has_one_attached :photo
+
   has_many :bookmarks, dependent: :destroy
   # On lie la table à movie (liaison many to many)
   has_many :movies, through: :bookmarks
